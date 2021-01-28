@@ -38,7 +38,7 @@ TThostFtdcPasswordType gInvesterPassword = "zl782013";                     // Í¶
 CThostFtdcMdApi *g_pMdUserApi = nullptr;   
 // ĞĞÇéÖ¸Õë
 #if SIMNOW
-char gMdFrontAddr[] = "tcp://180.168.146.187:10112";               // Ä£ÄâĞĞÇéÇ°ÖÃµØÖ·
+char gMdFrontAddr[] = "tcp://180.168.146.187:10111";               // Ä£ÄâĞĞÇéÇ°ÖÃµØÖ·
 #else
 char gMdFrontAddr[] = "tcp://180.168.214.244£º21213";               // ÉÏº£ÖĞÆÚĞĞÇéÇ°ÖÃµØÖ·
 #endif
@@ -47,7 +47,7 @@ char gMdFrontAddr[] = "tcp://180.168.214.244£º21213";               // ÉÏº£ÖĞÆÚĞ
 //MA105, TA105 Ö£ÉÌËù£¬ ±ØĞë´óĞ´×ÖÄ¸£¬Äê·İ²»´øµÚÒ»¸öÊı×Ö
 //i2105 ´óÉÌËù
 
-char *g_pInstrumentID[] = { "MA105"}; // ĞĞÇéºÏÔ¼´úÂëÁĞ±í£¬Ö£¡¢ÉÏ¡¢´ó¡¢ÖĞ½»Ò×Ëù¸÷Ñ¡Ò»ÖÖ
+char *g_pInstrumentID[] = { "i2105"}; // ĞĞÇéºÏÔ¼´úÂëÁĞ±í£¬Ö£¡¢ÉÏ¡¢´ó¡¢ÖĞ½»Ò×Ëù¸÷Ñ¡Ò»ÖÖ
 int instrumentNum = 1;                                             // ĞĞÇéºÏÔ¼¶©ÔÄÊıÁ¿
 unordered_map<string, TickToKlineHelper> g_KlineHash;              // ²»Í¬ºÏÔ¼µÄkÏß´æ´¢±í
 
