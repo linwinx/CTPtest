@@ -125,9 +125,10 @@ void CustomMdSpi::OnRspSubMarketData(
 			<< "卖价一" << ","
 			<< "卖量一" << ","
 			<< "持仓量" << ","
-			<< "换手率"
+			<< "成交金额"
 			<< std::endl;
 		outFile.close();
+		std::cout << "=====写csv标题OK=====" << std::endl;
 	}
 	else
 		std::cerr << "返回错误--->>> ErrorID=" << pRspInfo->ErrorID << ", ErrorMsg=" << pRspInfo->ErrorMsg << std::endl;
@@ -196,16 +197,16 @@ void CustomMdSpi::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMar
 	sprintf(filePath, "%s_market_data.csv", pDepthMarketData->InstrumentID);
 	std::ofstream outFile;
 	outFile.open(filePath, std::ios::app); // 文件追加写入 
-	outFile << pDepthMarketData->InstrumentID << "," 
-		<< pDepthMarketData->UpdateTime << "." << pDepthMarketData->UpdateMillisec << "," 
-		<< pDepthMarketData->LastPrice << "," 
-		<< pDepthMarketData->Volume << "," 
-		<< pDepthMarketData->BidPrice1 << "," 
-		<< pDepthMarketData->BidVolume1 << "," 
-		<< pDepthMarketData->AskPrice1 << "," 
-		<< pDepthMarketData->AskVolume1 << "," 
-		<< pDepthMarketData->OpenInterest << "," 
-		<< pDepthMarketData->Turnover << std::endl;
+	outFile << pDepthMarketData->InstrumentID << "," ///合约代码
+		<< pDepthMarketData->UpdateTime << "." << pDepthMarketData->UpdateMillisec << "," ///最后修改时间///最后修改毫秒
+		<< pDepthMarketData->LastPrice << "," ///最新价
+		<< pDepthMarketData->Volume << "," ///数量
+		<< pDepthMarketData->BidPrice1 << "," ///申买价一
+		<< pDepthMarketData->BidVolume1 << "," ///申买量一
+		<< pDepthMarketData->AskPrice1 << "," ///申卖价一
+		<< pDepthMarketData->AskVolume1 << "," ///申卖量一
+		<< pDepthMarketData->OpenInterest << "," ///持仓量
+		<< pDepthMarketData->Turnover << std::endl;//成交金额
 	outFile.close();
 
 	// 计算实时k线
