@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  UserRoleTest.cpp
+UserRoleTest.cpp(80): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  All 139 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  UserRoleTest.vcxproj -> E:\vsproject\AAC_UserRole\Release\UserRoleTest.exe
+  UserRoleTest.vcxproj -> E:\vsproject\AAC_UserRole\Release\UserRoleTest.pdb (Full PDB)

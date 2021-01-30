@@ -1,0 +1,8 @@
+﻿  AACUserRoleLib.cpp
+  SQLiteDatabase.cpp
+  SQLiteStatement.cpp
+SQLiteStatement.cpp(671): warning C4267: “初始化”: 从“size_t”转换到“unsigned short”，可能丢失数据
+  正在生成代码...
+  sqlite3secure.c
+LINK : warning LNK4068: 未指定 /MACHINE；默认设置为 X86
+  AAC_UserRole.vcxproj -> E:\vsproject\AAC_UserRole\Release\AAC_UserRole.lib

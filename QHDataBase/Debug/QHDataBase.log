@@ -1,0 +1,22 @@
+﻿生成启动时间为 2021/1/30 16:31:06。
+     1>项目“E:\trade\github\CTPtest\QHDataBase\QHDataBase.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D SQLITE_HAS_CODEC=1 /D CODEC_TYPE=CODEC_TYPE_AES128 /D SQLITE_CORE /D THREADSAFE /D SQLITE_SECURE_DELETE /D SQLITE_SOUNDEX /D SQLITE_ENABLE_COLUMN_METADATA /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt QHDataBaseLib.cpp SQLiteDatabase.cpp SQLiteStatement.cpp
+         QHDataBaseLib.cpp
+         正在生成代码...
+         正在编译...
+         SQLiteStatement.cpp
+         SQLiteDatabase.cpp
+         正在生成代码...
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\trade\github\CTPtest\Debug\QHDataBase_d.lib" /NOLOGO /MACHINE:X86 Debug\QHDataBase.res
+         Debug\QHDataBaseLib.obj
+         Debug\sqlite3secure.obj
+         Debug\SQLiteDatabase.obj
+         Debug\SQLiteStatement.obj
+         QHDataBase.vcxproj -> E:\trade\github\CTPtest\Debug\QHDataBase_d.lib
+     1>已完成生成项目“E:\trade\github\CTPtest\QHDataBase\QHDataBase.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.62

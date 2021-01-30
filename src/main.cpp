@@ -6,6 +6,8 @@
 #include "CustomTradeSpi.h"
 #include "TickToKlineHelper.h"
 
+#include "MyTrade.h"
+
 using namespace std;
 
 // 链接库
@@ -43,11 +45,11 @@ char gMdFrontAddr[] = "tcp://180.168.146.187:10111";               // 模拟行情前
 char gMdFrontAddr[] = "tcp://180.168.214.244：21213";               // 上海中期行情前置地址
 #endif
 
-//rb2015 上期所
-//MA105, TA105 郑商所， 必须大写字母，年份不带第一个数字
+//rb2015  sp2105上期所
+//MA105  TA105 郑商所， 必须大写字母，年份不带第一个数字
 //i2105 大商所
 
-char *g_pInstrumentID[] = { "i2105"}; // 行情合约代码列表，郑、上、大、中交易所各选一种
+char *g_pInstrumentID[] = { "i2105"  }; // 行情合约代码列表，郑、上、大、中交易所各选一种
 int instrumentNum = 1;                                             // 行情合约订阅数量
 unordered_map<string, TickToKlineHelper> g_KlineHash;              // 不同合约的k线存储表
 
@@ -60,6 +62,11 @@ TThostFtdcPriceType gLimitPrice = 22735;                           // 交易价格
 
 int main()
 {
+#if 1
+	MyTrade m_trade;
+	m_trade.test();
+
+#else
 	// 账号密码
 	//cout << "请输入账号： ";
 	//scanf("%s", gInvesterID);
@@ -102,7 +109,7 @@ int main()
 	// 转换本地k线数据
 	//TickToKlineHelper tickToKlineHelper;
 	//tickToKlineHelper.KLineFromLocalData("market_data.csv", "K_line_data.csv");
-	
+#endif	
 	getchar();
 	return 0;
 }
